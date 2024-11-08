@@ -1,6 +1,6 @@
 <?php  
 
-include_once('koneksi.php');
+include_once('../koneksi.php');
 $result = mysqli_query($mysqli, "SELECT * FROM guru_2359201020 ORDER BY nip_020  DESC");
 ?>
 <!DOCTYPE html>
@@ -34,10 +34,10 @@ $result = mysqli_query($mysqli, "SELECT * FROM guru_2359201020 ORDER BY nip_020 
         echo "<td>".$user_data['gender_020']."</td>";
         echo "<td>".$user_data['agama_020']."</td>";
         echo "<td>".$user_data['alamat_020']."</td>";
-        echo "<td><a href='editdatabarangelektronik.php?nip_020=$user_data[nip_020]'>Edit</a> | <a href='deletedatabarangelektronik.php?nip_020=$user_data[nip_020]'>Delete</a></td></tr>";        
+        echo "<td><a href='../edit/ubahdataguru.php?nip_020=$user_data[nip_020]'>Edit</a> | <a href='deletedatabarangelektronik.php?nip_020=$user_data[nip_020]'>Delete</a></td></tr>";        
     }
     ?>
   </table>
-  <a href="index.php">Kembali ke menu utama</a>
+  <a href="../index.php">Kembali ke menu utama</a>
 </body>
 </html>
